@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Fraunces", "Iowan Old Style", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-sans: "IBM Plex Sans", "Avenir Next", sans-serif;
+  --color-background: #efe6d4;
+  --color-foreground: #1a2e2c;
+  --color-card: #f7f1e4;
+  --color-card-foreground: #1a2e2c;
+  --color-primary: #0e5c57;
+  --color-primary-foreground: #f6f1e6;
+  --color-muted: #e5dcc8;
+  --color-muted-foreground: #5c564c;
+  --color-border: #cfc3aa;
+  --color-lead: #9c2f2f;
+  --color-copper: #2f6b4f;
+  --color-amber: #c9842a;
+  --color-ink: #1a2e2c;
+}
+
+:root {
+  --lead: #9c2f2f;
+  --copper: #2f6b4f;
+  --amber: #c9842a;
+  --ink: #1a2e2c;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgb(14 92 87 / 0.08), transparent 36%),
+    var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+.leaflet-container {
+  font-family: var(--font-sans);
+  background: #e7efe9;
+}
