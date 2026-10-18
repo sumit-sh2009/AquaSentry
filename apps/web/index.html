@@ -4,13 +4,28 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AquaSentry — Newark watershed</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520;9..144,680&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap"
-      rel="stylesheet"
+    <meta
+      name="description"
+      content="Check a Newark tap against the lead action level and the PFOA/PFOS MCL. A utility average does not certify a sample as safe."
     />
+    <meta name="theme-color" content="#ccd5ae" />
+    <title>AquaSentry — Newark watershed</title>
+    <script>
+      try {
+        var stored = localStorage.getItem("aquasentry-theme")
+        if (stored !== "dark" && stored !== "light") {
+          stored = "light"
+          localStorage.setItem("aquasentry-theme", "light")
+        }
+        document.documentElement.classList.remove("light", "dark")
+        document.documentElement.classList.add(stored)
+        document.documentElement.style.colorScheme = stored
+        if (stored === "dark") {
+          var meta = document.querySelector('meta[name="theme-color"]')
+          if (meta) meta.setAttribute("content", "#01472e")
+        }
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>
